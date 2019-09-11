@@ -8,6 +8,7 @@ add_library(${PROJECT_NAME} SHARED
 add_subdirectory(camera)
 add_subdirectory(data)
 add_subdirectory(feature)
+add_subdirectory(imu)
 add_subdirectory(initialize)
 add_subdirectory(io)
 add_subdirectory(match)
