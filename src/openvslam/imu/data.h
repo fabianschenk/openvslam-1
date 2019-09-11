@@ -1,3 +1,6 @@
+#ifndef OPENVSLAM_IMU_DATA_H
+#define OPENVSLAM_IMU_DATA_H
+
 #include "openvslam/type.h"
 
 namespace openvslam {
@@ -25,3 +28,5 @@ public:
 
 } // namespace imu
 } // namespace openvslam
+
+#endif // OPENVSLAM_IMU_DATA_H
