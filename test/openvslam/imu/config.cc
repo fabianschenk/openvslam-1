@@ -5,7 +5,7 @@
 
 using namespace openvslam;
 
-TEST(data, constructor) {
+TEST(config, constructor) {
     // basic information
     const std::string name = "IMU";
     const double rate_hz = 250.0;
