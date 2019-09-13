@@ -76,15 +76,11 @@ TEST(config, covariance_update) {
     // basic information
     const std::string name = "IMU";
     const double rate_hz = 300.0;
-    const double rate_dt = 1.0 / rate_hz;
 
     // create the relative pose "from IMU to camera" (_ic) and "from camera to IMU" (_ci)
     const Mat33_t rel_rot_ic = util::converter::to_rot_mat(Vec3_t{0.707, 0.0, -0.707} * M_PI / 2.0);
-    const Mat33_t rel_rot_ci = rel_rot_ic.transpose();
     const Vec3_t rel_trans_ic = Vec3_t{1.0, -2.0, 3.0};
-    const Vec3_t rel_trans_ci = -rel_rot_ic.transpose() * rel_trans_ic;
     const Mat44_t rel_pose_ic = util::converter::to_eigen_cam_pose(rel_rot_ic, rel_trans_ic);
-    const Mat44_t rel_pose_ci = util::converter::to_eigen_cam_pose(rel_rot_ci, rel_trans_ci);
 
     // noise parameters
     const double ns_acc_1 = 0.04;
